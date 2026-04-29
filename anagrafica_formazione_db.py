@@ -79,7 +79,7 @@ with c1:
     nome = st.text_input("Nome *", max_chars=60)
     data_nascita = st.date_input("Data di nascita *", value=date(1990, 1, 1), format="DD/MM/YYYY")
     codice_fiscale = st.text_input("Codice fiscale *", max_chars=16).upper()
-    email = st.text_input("Email partecipante *", max_chars=120, placeholder="nome@dominio.it")
+    email = st.text_input("Email *", max_chars=120, placeholder="nome@dominio.it")
 
 with c2:
     cognome = st.text_input("Cognome *", max_chars=60)
@@ -92,7 +92,7 @@ st.subheader("🏢 Punto vendita")
 
 c3, c4 = st.columns(2)
 with c3:
-    ragione_sociale = st.text_input("Ragione sociale azienda *", max_chars=150)
+    ragione_sociale = st.text_input("Azienda/punto vendita *", max_chars=150)
     partita_iva = st.text_input("Partita IVA", max_chars=11)
     codice_fiscale_azienda = st.text_input("Codice fiscale azienda", max_chars=16).upper()
     referente_azienda = st.text_input("Referente aziendale", max_chars=100)

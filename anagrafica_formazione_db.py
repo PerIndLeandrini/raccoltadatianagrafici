@@ -56,9 +56,9 @@ def api_post_anagrafica(payload: dict) -> dict:
 
 
 # ---------------------- UI ----------------------
-st.title("👤 Raccolta anagrafiche formazione")
+st.title("👤 Raccolta dati anagrfici")
 st.write(
-    "Modulo per raccogliere i dati anagrafici del partecipante e dell’azienda di appartenenza. "
+    "Modulo per raccogliere i dati anagrafici dei lavoratori e dell’azienda di appartenenza. "
     "I dati saranno usati per schede personali, registri formazione e futuri attestati."
 )
 
@@ -66,13 +66,13 @@ with st.sidebar:
     st.header("ℹ️ Uso del modulo")
     st.markdown(
         """
-- Non viene selezionato nessun corso.
-- Non viene salvato alcun CSV locale.
-- L’invio registra i dati nel database centralizzato 4step.
+- Compila il form qui accanto in tutte le sue parti
+- Nella seziine aziendale puoi indicare solamente il nome del punto vendita 
+- L’invio registra i dati nel database centralizzato.
 """
     )
 
-st.subheader("👤 Dati anagrafici partecipante")
+st.subheader("👤 Dati anagrafici")
 
 c1, c2 = st.columns(2)
 with c1:
@@ -88,7 +88,7 @@ with c2:
     mansione = st.text_input("Mansione / Ruolo", max_chars=100, placeholder="es. Addetto vendite, Magazziniere, Impiegato")
 
 st.markdown("---")
-st.subheader("🏢 Azienda di appartenenza")
+st.subheader("🏢 Punto vendita")
 
 c3, c4 = st.columns(2)
 with c3:
@@ -109,7 +109,7 @@ st.markdown("---")
 st.subheader("🔐 Informativa sintetica & consenso")
 st.markdown(
     """
-**Finalità**: gestione anagrafica formazione, predisposizione schede personali, registri e attestati.  
+**Finalità**: gestione anagrafica, predisposizione schede personali, registri e futuri attestati.  
 **Base giuridica**: adempimenti connessi alla formazione e agli obblighi documentali applicabili.  
 **Conservazione**: per il tempo necessario a dimostrare la formazione svolta e secondo le regole documentali applicabili.  
 **Diritti**: accesso, rettifica, limitazione, cancellazione ove applicabile.

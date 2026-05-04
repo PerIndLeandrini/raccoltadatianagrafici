@@ -77,7 +77,14 @@ st.subheader("👤 Dati anagrafici")
 c1, c2 = st.columns(2)
 with c1:
     nome = st.text_input("Nome *", max_chars=60)
-    data_nascita = st.date_input("Data di nascita *", value=date(1950, 1, 1), format="DD/MM/YYYY")
+    data_nascita = st.date_input(
+        "Data di nascita *",
+        value=date(1980, 1, 1),
+        min_value=date(1950, 1, 1),
+        max_value=date(2026, 12, 31),
+        format="DD/MM/YYYY"
+    )
+    
     codice_fiscale = st.text_input("Codice fiscale *", max_chars=16).upper()
     email = st.text_input("Email *", max_chars=120, placeholder="nome@dominio.it")
 
